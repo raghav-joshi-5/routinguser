@@ -4,8 +4,8 @@
       Add User
     </button>
   </div>
-  <div class="col-md-4">
-    <ul class="list-group">
+  <div class="col-md-4 offset-md-4">
+    <ul class="list-group" *ngIf="userArr.length > 0; else noUser">
       <li
         [routerLink]="user.userId"
         *ngFor="let user of userArr"
@@ -14,5 +14,8 @@
         {{ user.userName }}
       </li>
     </ul>
+    <ng-template #noUser>
+      <p class="alert alert-danger">No user Available to show</p>
+    </ng-template>
   </div>
 </div>

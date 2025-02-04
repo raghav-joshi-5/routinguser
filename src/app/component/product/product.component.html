@@ -5,14 +5,17 @@
 </div>
 <div class="row">
   <div class="col-md-4 offset-md-4">
-    <ul class="list-group">
+    <ul class="list-group" *ngIf="productArr.length > 0; else noProduct">
       <li
         [routerLink]="prod.PId"
         *ngFor="let prod of productArr"
-        class="list-group-item text-dark mb-2"
+        class="list-group-item text-white mb-2 bg-secondary"
       >
         {{ prod.pName }}
       </li>
     </ul>
+    <ng-template #noProduct>
+      <p class="alert alert-danger">No Product Available</p>
+    </ng-template>
   </div>
 </div>
