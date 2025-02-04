@@ -27,10 +27,6 @@ export class ProductFormComponent implements OnInit {
     this.editMode();
   }
 
-  get fun() {
-    return this.productForm.controls;
-  }
-
   editMode() {
     this.PId = this._route.snapshot.params['PId'];
     if (this.PId) {

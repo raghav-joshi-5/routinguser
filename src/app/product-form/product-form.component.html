@@ -13,12 +13,7 @@
             />
           </div>
 
-          <p
-            class="text-danger"
-            *ngIf="fun['pName'].touched && fun['pName'].hasError('required')"
-          >
-            the user name is required field
-          </p>
+         
 
           <div class="form-group">
             <label for="pStatus">Product Status</label>
@@ -29,14 +24,7 @@
             </select>
           </div>
 
-          <p
-            class="text-danger"
-            *ngIf="
-              fun['pStatus'].touched && fun['pStatus'].hasError('required')
-            "
-          >
-            the product status is required field
-          </p>
+        
 
           <div class="form-group">
             <label for="canReturn">Can return</label>
@@ -50,15 +38,7 @@
             </select>
           </div>
 
-          <p
-            class="text-danger"
-            *ngIf="
-              fun['canReturns'].touched &&
-              fun['canReturns'].hasError('required')
-            "
-          >
-            the can Return is required field
-          </p>
+        
 
           <div class="form-group">
             <label for="pImg">Product Img URL</label>
@@ -70,13 +50,7 @@
             />
           </div>
 
-          <p
-            class="text-danger"
-            *ngIf="fun['pImg'].touched && fun['pImg'].hasError('required')"
-          >
-            the image URL is required field
-          </p>
-
+         
           <div class="d-flex justify-content-end">
             <button mat-raised-button color="primary">
               {{ isEditmode ? "Update Product" : "Add Product" }}
