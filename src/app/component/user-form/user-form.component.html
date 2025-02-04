@@ -1,0 +1,70 @@
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <h3>{{ isEditmode ? "Edit User" : "Add User" }}</h3>
+    <div class="card">
+      <div class="card-body text-white bg-secondary">
+     
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="userName">User Name</label>
+            <input
+              type="text"
+              formControlName="userName"
+              class="form-control"
+              id="userName"
+            />
+          </div>
+          <p
+            class="text-danger"
+            *ngIf="
+              fun['userName'].touched && fun['userName'].hasError('required')
+            "
+          >
+            the user name is required field
+          </p>
+          <div class="form-group">
+            <label for="userRole">User Role</label>
+            <select
+              id="userRole"
+              formControlName="userRole"
+              class="form-control"
+            >
+              <option value="admin">Admin</option>
+              <option value="candidate">Candidate</option>
+            </select>
+          </div>
+          <p
+            class="text-danger"
+            *ngIf="
+              fun['userRole'].touched && fun['userRole'].hasError('required')
+            "
+          >
+            Select any one
+          </p>
+          <div class="form-group">
+            <label for="userImg">User Image Url</label>
+            <input
+              type="text"
+              formControlName="userImg"
+              class="form-control"
+              id="userImg"
+            />
+          </div>
+          <p
+            class="text-danger"
+            *ngIf="
+              fun['userImg'].touched && fun['userImg'].hasError('required')
+            "
+          >
+            Enter URL of image
+          </p>
+          <div class="d-flex justify-content-end">
+            <button mat-raised-button color="primary">
+              {{ isEditmode ? "Update User" : "Add User" }}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

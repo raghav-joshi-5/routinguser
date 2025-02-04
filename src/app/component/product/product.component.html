@@ -1,0 +1,18 @@
+<div class="col-md-12 d-flex justify-content-end">
+  <button routerLink="addproduct" mat-raised-button color="primary">
+    Add product
+  </button>
+</div>
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <ul class="list-group">
+      <li
+        [routerLink]="prod.PId"
+        *ngFor="let prod of productArr"
+        class="list-group-item text-dark mb-2"
+      >
+        {{ prod.pName }}
+      </li>
+    </ul>
+  </div>
+</div>

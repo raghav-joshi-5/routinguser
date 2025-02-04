@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12 d-flex justify-content-end mb-2">
+    <button routerLink="adduser" mat-raised-button color="primary">
+      Add User
+    </button>
+  </div>
+  <div class="col-md-4">
+    <ul class="list-group">
+      <li
+        [routerLink]="user.userId"
+        *ngFor="let user of userArr"
+        class="list-group-item mb-2 bg-secondary text-white"
+      >
+        {{ user.userName }}
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <div class="card">
+      <div class="card-body text-dark">
+        <mat-icon class="text-right w-100" routerLink="/user"
+          >arrow_back</mat-icon
+        >
+        <img [src]="userObj.userImg" alt="userObj.userName" />
+        <h3>Name: {{ userObj.userName }}</h3>
+        <p>User Role: {{ userObj.userRole }}</p>
+      </div>
+      <div class="card-footer d-flex justify-content-between">
+        <button routerLink="edituser" mat-raised-button color="primary">
+          Edit
+        </button>
+        <button (click)="onRemove()" mat-raised-button color="accent">
+          Remove
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
