@@ -15,9 +15,7 @@
 
           <p
             class="text-danger"
-            *ngIf="
-              fun['userName'].touched && fun['userName'].hasError('required')
-            "
+            *ngIf="fun['pName'].touched && fun['pName'].hasError('required')"
           >
             the user name is required field
           </p>
